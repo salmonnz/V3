@@ -1,0 +1,41 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body {
+        margin: 0;
+        @apply bg-primaryBg;
+        @apply text-primarySubTitle;
+        
+
+    }
+}
+/* สไตล์ข้อความเบอร์โทรศัพท์ */
+.bouncing-text {
+    display: inline-block;
+    font-size: 24px;
+    color: #FF4500; /* สีของข้อความ */
+    font-weight: bold;
+  }
+  
+  /* CSS animation */
+  @keyframes bounceUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* สไตล์แต่ละตัวอักษร */
+  .bouncing-text span {
+    display: inline-block;
+    animation: bounceUp 1s infinite; /* เล่น animation ตลอดเวลา */
+  }
+  
